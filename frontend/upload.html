@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Subir CSV - CrudClinic</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container py-4">
+    <h3>Carga masiva desde CSV</h3>
+    <p class="text-muted">Formato CSV: para pacientes -> columnas: nombre_paciente,correo_paciente</p>
+
+    <div class="mb-3">
+      <label>Pacientes</label>
+      <input type="file" id="csvPac" accept=".csv" class="form-control">
+      <button id="btnPac" class="btn btn-primary mt-2">Subir Pacientes</button>
+    </div>
+
+    <div class="mb-3">
+      <label>Médicos</label>
+      <input type="file" id="csvMed" accept=".csv" class="form-control">
+      <button id="btnMed" class="btn btn-primary mt-2">Subir Médicos</button>
+    </div>
+
+    <div class="mb-3">
+        <label>Citas</label>
+        <input type="file" id="csvCitas" accept=".csv" class="form-control">
+        <button id="btnCitas" class="btn btn-primary mt-2">Subir Citas</button>
+    </div>
+
+    <a href="/dashboard.html" class="btn btn-secondary">Volver</a>
+  </div>
+
+
+
+  <script src="/js/upload.js"></script>
+</body>
+</html>

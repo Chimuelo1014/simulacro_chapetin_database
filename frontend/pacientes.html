@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pacientes - CrudClinic</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center my-4">
+      <h3>Pacientes</h3>
+      <div>
+        <a href="/dashboard.html" class="btn btn-secondary">Volver</a>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAdd">Nuevo</button>
+        <button id="resetPacientes" class="btn btn-danger ms-2">Reiniciar tabla</button>
+
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="table table-striped">
+        <thead><tr><th>ID</th><th>Nombre</th><th>Correo</th><th>Acciones</th></tr></thead>
+        <tbody id="tbodyPacientes"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal Agregar/Editar -->
+  <div class="modal fade" id="modalAdd" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content p-3">
+        <form id="formPaciente">
+          <input type="hidden" name="id_paciente" id="id_paciente">
+          <div class="mb-2"><input class="form-control" name="nombre_paciente" id="nombre_paciente" placeholder="Nombre" required></div>
+          <div class="mb-2"><input class="form-control" name="correo_paciente" id="correo_paciente" placeholder="Correo" required></div>
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancelar</button>
+            <button class="btn btn-primary" type="submit">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/pacientes.js"></script>
+</body>
+</html>

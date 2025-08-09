@@ -1,0 +1,5 @@
+/* frontend/css/styles.css */
+body { padding-top: 1rem; }
+.container { max-width: 960px; }
+.header-actions { display:flex; gap:10px; justify-content:flex-end; }
+.table-wrap { max-height: 60vh; overflow:auto; }
